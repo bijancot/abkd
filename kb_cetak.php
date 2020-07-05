@@ -46,11 +46,11 @@ $mpdf->useGraphs = true;
 <body>
 <?php
 $identitas      = get_data( "SELECT * FROM identitas WHERE id_user = '$_SESSION[id_user]'" );
-$pendidikan     = get_data( "SELECT * FROM kb_pendidikan WHERE id_user = '$_SESSION[id_user]' AND id_tahun = (SELECT id FROM tahun_ajaran WHERE status = 1)" );
-$penelitian     = get_data( "SELECT * FROM kb_penelitian WHERE id_user = '$_SESSION[id_user]' AND id_tahun = (SELECT id FROM tahun_ajaran WHERE status = 1)" );
-$pengabdian     = get_data( "SELECT * FROM kb_pengabdian_masy WHERE id_user = '$_SESSION[id_user]' AND id_tahun = (SELECT id FROM tahun_ajaran WHERE status = 1)" );
-$penunjang_lain = get_data( "SELECT * FROM kb_penunjang_lain WHERE id_user = '$_SESSION[id_user]' AND id_tahun = (SELECT id FROM tahun_ajaran WHERE status = 1)" );
-$kewajiban      = get_data( "SELECT * FROM kewajiban_khusus WHERE id_user = '$_SESSION[id_user]' AND id_tahun = (SELECT id FROM tahun_ajaran WHERE status = 1)" );
+$pendidikan     = get_data( "SELECT * FROM kb_pendidikan WHERE id_user = '$_SESSION[id_user]' AND tahun_ajaran = (SELECT id FROM tahun_ajaran WHERE status = 1)" );
+$penelitian     = get_data( "SELECT * FROM kb_penelitian WHERE id_user = '$_SESSION[id_user]' AND tahun_ajaran = (SELECT id FROM tahun_ajaran WHERE status = 1)" );
+$pengabdian     = get_data( "SELECT * FROM kb_pengabdian_masy WHERE id_user = '$_SESSION[id_user]' AND tahun_ajaran = (SELECT id FROM tahun_ajaran WHERE status = 1)" );
+$penunjang_lain = get_data( "SELECT * FROM kb_penunjang_lain WHERE id_user = '$_SESSION[id_user]' AND tahun_ajaran = (SELECT id FROM tahun_ajaran WHERE status = 1)" );
+$kewajiban      = get_data( "SELECT * FROM kewajiban_khusus WHERE id_user = '$_SESSION[id_user]'" );
 $logo = get_data('SELECT * FROM logo where id = 1');
 //var_dump( $identitas);
 ?>

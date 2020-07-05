@@ -1,12 +1,13 @@
 <?php require( realpath( 'header.php' ) ); ?>
 <?php
 require_once './model/getdata.php';
-$pendidikan = get_data( 'SELECT kb_pendidikan.*,tahun_ajaran.semester,tahun_ajaran.tahun FROM kb_pendidikan LEFT OUTER JOIN tahun_ajaran on kb_pendidikan.id_tahun = tahun_ajaran.id order by tahun_ajaran.tahun' );
-$penelitian = get_data( 'SELECT kb_penelitian.*,tahun_ajaran.semester,tahun_ajaran.tahun FROM kb_penelitian LEFT OUTER JOIN tahun_ajaran on kb_penelitian.id_tahun = tahun_ajaran.id order by tahun_ajaran.tahun' );
-$pengabdian = get_data( 'SELECT kb_pengabdian_masy.*,tahun_ajaran.semester,tahun_ajaran.tahun FROM kb_pengabdian_masy LEFT OUTER JOIN tahun_ajaran on kb_pengabdian_masy.id_tahun = tahun_ajaran.id order by tahun_ajaran.tahun' );
-$penunjang  = get_data( 'SELECT kb_penunjang_lain.*,tahun_ajaran.semester,tahun_ajaran.tahun FROM kb_penunjang_lain LEFT OUTER JOIN tahun_ajaran on kb_penunjang_lain.id_tahun = tahun_ajaran.id order by tahun_ajaran.tahun' );
-$kewajiban  = get_data( 'SELECT kewajiban_khusus.*,tahun_ajaran.semester,tahun_ajaran.tahun FROM kewajiban_khusus LEFT OUTER JOIN tahun_ajaran on kewajiban_khusus.id_tahun = tahun_ajaran.id order by tahun_ajaran.tahun' );
 $id_user    = $_SESSION['id_user'];
+$pendidikan = get_data( "SELECT kb_pendidikan.*,tahun_ajaran.semester,tahun_ajaran.tahun FROM kb_pendidikan LEFT OUTER JOIN tahun_ajaran on kb_pendidikan.tahun_ajaran = tahun_ajaran.id where id_user='$id_user' order by tahun_ajaran.tahun " );
+$penelitian = get_data( "SELECT kb_penelitian.*,tahun_ajaran.semester,tahun_ajaran.tahun FROM kb_penelitian LEFT OUTER JOIN tahun_ajaran on kb_penelitian.tahun_ajaran = tahun_ajaran.id where id_user='$id_user' order by tahun_ajaran.tahun " );
+$pengabdian = get_data( "SELECT kb_pengabdian_masy.*,tahun_ajaran.semester,tahun_ajaran.tahun FROM kb_pengabdian_masy LEFT OUTER JOIN tahun_ajaran on kb_pengabdian_masy.tahun_ajaran = tahun_ajaran.id where id_user='$id_user' order by tahun_ajaran.tahun " );
+$penunjang  = get_data( "SELECT kb_penunjang_lain.*,tahun_ajaran.semester,tahun_ajaran.tahun FROM kb_penunjang_lain LEFT OUTER JOIN tahun_ajaran on kb_penunjang_lain.tahun_ajaran = tahun_ajaran.id where id_user='$id_user' order by tahun_ajaran.tahun " );
+$kewajiban  = get_data( "SELECT kewajiban_khusus.*,tahun_ajaran.semester,tahun_ajaran.tahun FROM kewajiban_khusus LEFT OUTER JOIN tahun_ajaran on kewajiban_khusus.tahun = tahun_ajaran.id where id_user='$id_user' order by tahun_ajaran.tahun " );
+
 ?>
     <section class="content">
         <div class="container-fluid">
