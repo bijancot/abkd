@@ -35,7 +35,7 @@
                                     </thead>
                                     <tbody>
                                     <?php 
-                                        $query = "SELECT * FROM kb_penelitian WHERE id_user = '$id_user' AND id_tahun = (SELECT id FROM tahun_ajaran WHERE status = 1)";
+                                        $query = "SELECT * FROM kb_penelitian WHERE id_user = '$id_user' AND tahun_ajaran = (SELECT tahun FROM tahun_ajaran WHERE status = 1)";
                                         $result = mysqli_query($conn, $query);
                                         while ($row = mysqli_fetch_array($result)) {
                                     ?>
