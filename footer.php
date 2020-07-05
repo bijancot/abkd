@@ -6,7 +6,6 @@
 
 <!-- Select Plugin Js -->
 
-
 <!-- Slimscroll Plugin Js -->
 <script src="bootstrap/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
 

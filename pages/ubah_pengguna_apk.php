@@ -3,28 +3,12 @@
 	
 
 	if (isset($_POST['ubah'])) {
+		$id_user=$_POST['id_user'];
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		$level = $_POST['level'];
-		
-
-	if ($_FILES['image']['name']=='') {
-			$image1 = $_POST['photo'];
-			$query = "UPDATE pengguna SET username='$username', password='$password', level='$level' WHERE id_pengguna='$id_pengguna' ";
-			$result = mysqli_query($conn, $query);
-
-			if ($result) {
-				echo '<script> alert("Berhasil")
-				window.location = "../pengguna.php"
-				</script>';
-			}
-			else {
-				echo '<script> alert("Gagal")
-				window.location = "../pengguna.php"
-				</script>';
-			}
-		}
-			$query = "UPDATE pengguna SET username='$username', password='$password', level='$level' WHERE id_pengguna='$id_pengguna' ";
+	
+			$query = "UPDATE user SET username='$username', password='$password', level='$level' WHERE id_user='$id_user' ";
 			$result = mysqli_query($conn, $query);
 
 			if ($result) {
@@ -33,12 +17,12 @@
 				</script>';
 			}
 			else {
-				echo '<script> alert("Datal Gagal Ditambah")
+				echo '<script> alert("Datal Gagal Diubah")
 				window.location = "../pengguna.php"
 				</script>';
 			}
 		
-		}
+	}
 	
 ?>
 
