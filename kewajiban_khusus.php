@@ -105,7 +105,15 @@
                                 <tbody>
                                    <?php
                                         $no = 0;
-                                        $query = "SELECT * FROM kewajiban_khusus where id_user = '$id_user' ";
+
+                                        $tahun = "";
+                                        $query1 = "SELECT * FROM tahun_ajaran where status ='1'";
+                                        $result1 = mysqli_query($conn, $query1;
+                                        while ($row2 = mysqli_fetch_array($result)) {
+                                            $tahun = $row['tahun']''
+                                        };
+
+                                        $query = "SELECT * FROM kewajiban_khusus where id_user = '$id_user' and tahun == $tahun";
                                         $result = mysqli_query($conn, $query);
                                         while ($row = mysqli_fetch_array($result)) {
                                     ?>

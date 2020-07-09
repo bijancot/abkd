@@ -85,7 +85,7 @@ $pg = basename( substr( $_SERVER['PHP_SELF'], 0, strrpos( $_SERVER['PHP_SELF'], 
             <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
                data-target="#navbar-collapse" aria-expanded="false"></a>
             <a href="javascript:void(0);" class="bars"></a>
-            <a class="navbar-brand" href="index.html">APLIKASI BEBAN KERJA DOSEN POLITALA | 2019/2020 ganjil</a>
+            <a class="navbar-brand" href="index.html">APLIKASI BEBAN KERJA DOSEN | 2019/2020 ganjil</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -219,7 +219,7 @@ $pg = basename( substr( $_SERVER['PHP_SELF'], 0, strrpos( $_SERVER['PHP_SELF'], 
         <!-- Footer -->
         <div class="legal">
             <div class="copyright">
-                &copy; 2016 - 2017 <a href="javascript:void(0);">AdminBSB - Material Design</a>.
+                &copy; 2020 / 2021<a href="javascript:void(0);">AdminBSB - Material Design</a>.
             </div>
             <div class="version">
                 <b>Version: </b> 1.0.5
