@@ -86,7 +86,7 @@ $last_no_kbp = $db->fetch();
                                                         $tahunakademik = $db->fetch();
 
                                                         foreach($tahunakademik as $taaa => $tahun){
-                                                            echo "<option value=\"".$tahun->tahun."\">Lanjutkan</option>";
+                                                            echo "<option value=\"".$tahun->tahun."\">".$tahun->tahun."</option>";
                                                         }
                                                         ?>
                                                     </select>
