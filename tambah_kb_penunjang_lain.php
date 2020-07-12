@@ -76,8 +76,20 @@ $last_no_kbp = $db->fetch();
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" id="" name="masa_penugasan" class="form-control">
-                                                    <label class="form-label">MASA PENUGASAN</label>
+                                                <label>Masa Penugasan</label>
+                                                    <select class="form-control show-tick" name="masa_penugasan">
+                                                        <option>-- Please Select --</option>
+                                                        <?php
+                                                        $db = new Database();
+                                                        $query   = "SELECT * FROM tahun_ajaran ORDER BY tahun";
+                                                        $db->query( $query );
+                                                        $tahunakademik = $db->fetch();
+
+                                                        foreach($tahunakademik as $taaa => $tahun){
+                                                            echo "<option value=\"".$tahun->tahun."\">".$tahun->tahun."</option>";
+                                                        }
+                                                        ?>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -95,7 +107,7 @@ $last_no_kbp = $db->fetch();
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="number" id="" name="kinerja_sks" class="form-control">
+                                                    <input type="text" id="" name="kinerja_sks" class="form-control">
                                                     <label class="form-label">SKS</label>
                                                 </div>
                                             </div>

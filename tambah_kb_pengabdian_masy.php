@@ -76,7 +76,7 @@ $last_no_kbp = $db->fetch();
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                <label>Rekomendasi</label>
+                                                <label>Masa Penugasan</label>
                                                     <select class="form-control show-tick" name="masa_penugasan">
                                                         <option>-- Please Select --</option>
                                                         <?php
