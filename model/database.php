@@ -9,8 +9,13 @@ class Database {
 		$this->connect();
 	}
 	public function connect(){
-        $this->connection = mysqli_connect('127.0.0.1','root','','db_sita');
+		$namaserver = 'localhost';
+        $userdb = 'admin_abkd';
+        $passdb = '1sampaiabkd';
+        $namadb = 'admin_abkd';
 
+		$this->connection = mysqli_connect($namaserver, $userdb, $passdb, $namadb);
+		
 		if(mysqli_connect_error()){
 			die("Database failed to connect ".mysqli_connect_error().mysqli_connect_errno());
 		}
