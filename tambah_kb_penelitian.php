@@ -207,13 +207,19 @@ $last_no_kbp = $db->fetch();
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <label>Tahun</label>
+                                                <label>Tahun</label>
                                                     <select class="form-control show-tick" name="tahun">
                                                         <option>-- Please Select --</option>
-                                                        <option value="2018/2019">2018/2019</option>
-                                                        <option value="2019/2020">2019/2020</option>
-                                                        <option value="2020/2021">2020/2021</option>
-                                                        <option value="2021/2022">2021/2022</option>
+                                                        <?php
+                                                        $db = new Database();
+                                                        $query   = "SELECT * FROM tahun_ajaran ORDER BY tahun";
+                                                        $db->query( $query );
+                                                        $tahunakademik = $db->fetch();
+
+                                                        foreach($tahunakademik as $taaa => $tahun){
+                                                            echo "<option value=\"".$tahun->tahun."\">".$tahun->tahun."</option>";
+                                                        }
+                                                        ?>
                                                     </select>
                                                 </div>
                                             </div>
