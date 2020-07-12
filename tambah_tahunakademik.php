@@ -32,7 +32,7 @@ if(isset($_POST['simpan'])){
 											<div class="form-group">
 												<div class="form-line">
 													<label class="">Tahun Ajaran</label>
-													<input type="text" id="" name="tahun" class="form-control" placeholder="2012/2013" required>
+													<input type="text" id="" name="tahun" class="form-control" placeholder="masukkan tahun ajaran" required>
 												</div>
 											</div>
 										</div>
