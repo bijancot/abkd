@@ -80,7 +80,10 @@ $last_no_kbp = $db->fetch();
                                                     <select class="form-control show-tick" name="masa_penugasan">
                                                         <option>-- Please Select --</option>
                                                         <?php
-                                                        $tahunakademik = get_data('SELECT * FROM tahun_ajaran ORDER BY tahun');
+                                                        $db = new Database();
+                                                        $query   = "SELECT * FROM tahun_ajaran ORDER BY tahun";
+                                                        $db->query( $query );
+                                                        $tahunakademik = $db->fetch();
 
                                                         foreach($tahunakademik as $taaa => $tahun){
                                                             echo "<option value=\"".$tahun->tahun."\">Lanjutkan</option>";
