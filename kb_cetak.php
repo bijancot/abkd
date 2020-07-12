@@ -10,8 +10,7 @@ $mpdf->useGraphs = true;
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Lembar Bebar Kerja Dosen</title>
-    <title>Generate a document Word</title>
+    <title>Lembar Beban Kerja Dosen</title>
     <link rel="stylesheet" href="./bootstrap/css/materialize.css">
     <style>
         table#header-table, th {
