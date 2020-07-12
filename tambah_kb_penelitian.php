@@ -63,7 +63,7 @@ $last_no_kbp = $db->fetch();
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="number" id="" name="bk_sks" class="form-control">
+                                                    <input type="text" id="" name="bk_sks" class="form-control">
                                                     <label class="form-label">SKS</label>
                                                 </div>
                                             </div>
@@ -96,7 +96,7 @@ $last_no_kbp = $db->fetch();
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="number" id="" name="kinerja_sks" class="form-control">
+                                                    <input type="text" id="" name="kinerja_sks" class="form-control">
                                                     <label class="form-label">SKS</label>
                                                 </div>
                                             </div>
