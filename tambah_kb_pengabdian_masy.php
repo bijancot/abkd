@@ -77,13 +77,13 @@ $last_no_kbp = $db->fetch();
                                             <div class="form-group">
                                                 <div class="form-line">
                                                 <label>Rekomendasi</label>
-                                                    <select class="form-control show-tick" name="rekomendasi">
+                                                    <select class="form-control show-tick" name="masa_penugasan">
                                                         <option>-- Please Select --</option>
                                                         <?php
                                                         $tahunakademik = get_data('SELECT * FROM tahun_ajaran ORDER BY tahun');
 
                                                         foreach($tahunakademik as $taaa => $tahun){
-                                                            echo "<option value=\"".$tahun['tahun']."\">Lanjutkan</option>";
+                                                            echo "<option value=\"".$tahun->tahun."\">Lanjutkan</option>";
                                                         }
                                                         ?>
                                                     </select>
