@@ -46,10 +46,6 @@ $mpdf->useGraphs = true;
 <?php
 $identitas      = get_data( "SELECT * FROM identitas WHERE id_user = '$_SESSION[id_user]'" );
 $pendidikan     = get_data( "SELECT * FROM kb_pendidikan WHERE id_user = '$_SESSION[id_user]' AND tahun_ajaran = (SELECT tahun FROM tahun_ajaran WHERE status = 1)" );
-$penelitian     = get_data( "SELECT * FROM kb_penelitian WHERE id_user = '$_SESSION[id_user]' AND tahun_ajaran = (SELECT tahun FROM tahun_ajaran WHERE status = 1)" );
-$pengabdian     = get_data( "SELECT * FROM kb_pengabdian_masy WHERE id_user = '$_SESSION[id_user]' AND tahun_ajaran = (SELECT tahun FROM tahun_ajaran WHERE status = 1)" );
-$penunjang_lain = get_data( "SELECT * FROM kb_penunjang_lain WHERE id_user = '$_SESSION[id_user]' AND tahun_ajaran = (SELECT tahun FROM tahun_ajaran WHERE status = 1)" );
-$kewajiban      = get_data( "SELECT * FROM kewajiban_khusus WHERE id_user = '$_SESSION[id_user]' AND tahun_ajaran = (SELECT tahun FROM tahun_ajaran WHERE status = 1)" );
 $logo = get_data('SELECT * FROM logo where id = 1');
 //var_dump( $identitas);
 ?>
@@ -209,76 +205,9 @@ $logo = get_data('SELECT * FROM logo where id = 1');
                 <td><?php echo $pend->masa_penugasan ?></td>
             </tr>
 		<?php endforeach; ?>
-        <tr id="heading">
-            <td colspan="5">
-                <h3>III. BIDANG PENELITIAN DAN PENGEMBANGAN ILMU</h3>
-            </td>
-        </tr>
-		<?php foreach ( $penelitian as $p => $pend ): ?>
-            <tr>
-                <td><?php echo $p + 1 ?></td>
-                <td><?php echo $pend->jenis_kegiatan ?></td>
-                <td><?php echo $pend->bk_buktipenugasan ?></td>
-                <td><?php echo $pend->bk_sks ?></td>
-                <td><?php echo $pend->masa_penugasan ?></td>
-            </tr>
-		<?php endforeach; ?>
-        <tr id="heading">
-            <td colspan="5">
-                <h3>IV. BIDANG PENGABDIAN KEPADA MASYARAKAT</h3>
-            </td>
-        </tr>
-		<?php foreach ( $pengabdian as $p => $pend ): ?>
-            <tr>
-                <td><?php echo $p + 1 ?></td>
-                <td><?php echo $pend->jenis_kegiatan ?></td>
-                <td><?php echo $pend->bk_buktipenugasan ?></td>
-                <td><?php echo $pend->bk_sks ?></td>
-                <td><?php echo $pend->masa_penugasan ?></td>
-            </tr>
-		<?php endforeach; ?>
-        <tr id="heading">
-            <td colspan="5">
-                <h3>V. BIDANG PENUNJANG LAINNYA</h3>
-            </td>
-        </tr>
-		<?php foreach ( $penunjang_lain as $p => $pend ): ?>
-            <tr>
-                <td><?php echo $p + 1 ?></td>
-                <td><?php echo $pend->jenis_kegiatan ?></td>
-                <td><?php echo $pend->bk_buktipenugasan ?></td>
-                <td><?php echo $pend->bk_sks ?></td>
-                <td><?php echo $pend->masa_penugasan ?></td>
-            </tr>
-		<?php endforeach; ?>
         <br>
     </table>
     <br>
-	<?php if ( $identitas[0]->jab_fungsional == 'Lektor Kepala' || $identitas[0]->jab_fungsional == 'Profesor' ): ?>
-        <table id="header-table" width="100%">
-            <tr>
-                <th>No.</th>
-                <th>Tahun</th>
-                <th>Judul Karya</th>
-                <th>Jenis Karya</th>
-                <th>Publikasi Karya</th>
-            </tr>
-            <tr>
-                <td colspan="5">
-                    <h3>VI. KEWAJIBAN KHUSUS</h3>
-                </td>
-            </tr>
-			<?php foreach ( $kewajiban as $p => $pend ): ?>
-                <tr>
-                    <td><?php echo $p + 1 ?></td>
-                    <td><?php echo $pend->tahun_ajaran ?></td>
-                    <td><?php echo $pend->judul_karya ?></td>
-                    <td><?php echo $pend->jenis_karya ?></td>
-                    <td><?php echo $pend->forum_publikasi ?></td>
-                </tr>
-			<?php endforeach; ?>
-        </table>
-	<?php endif; ?>
     <br>
     <br>
     <br>

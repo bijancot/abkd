@@ -21,7 +21,15 @@
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <label class="">Tahun</label>
-                                                <input type="text" id="" name="tahun" class="form-control" required>
+                                                <?php 
+                                                    $query1 = "SELECT * FROM tahun_ajaran where status ='1'";
+                                                    $result1 = mysqli_query($conn, $query1);
+                                                    while ($row2 = mysqli_fetch_array($result1)) {
+                                                        $tahun = $row2['tahun'];
+                                                    
+                                                ?>
+                                                <input type="text" id="" name="tahun" value="<?php echo $tahun;?>" class="form-control" required readonly>
+                                                <?php }?>
                                             </div>
                                         </div>
                                     </div>
@@ -86,7 +94,7 @@
 				<div class="card">
 					<div class="header">
 						<h2>
-							KINERJA KEWAJIBAN KHUSUS
+							KINERJA KEWAJIBAN KHUSUS &nbsp;<a href="kb_cetak_kewajiban.php" class="btn btn-default"><i class="glyphicon glyphicon-print"></i></a>
 						</h2>
 					</div>
 					<div class="body">
@@ -109,16 +117,16 @@
                                         $tahun = "";
                                         $query1 = "SELECT * FROM tahun_ajaran where status ='1'";
                                         $result1 = mysqli_query($conn, $query1);
-                                        while ($row2 = mysqli_fetch_array($result)) {
-                                            $tahun = $row['tahun'];
+                                        while ($row2 = mysqli_fetch_array($result1)) {
+                                            $tahun = $row2['tahun'];
                                         };
 
-                                        $query = "SELECT * FROM kewajiban_khusus where id_user = '$id_user' and tahun == $tahun";
+                                        $query = "SELECT * FROM kewajiban_khusus where id_user = '$id_user' and tahun_ajaran = '$tahun'";
                                         $result = mysqli_query($conn, $query);
                                         while ($row = mysqli_fetch_array($result)) {
                                     ?>
                                     <tr>
-                                        <td><?php echo $row['tahun']?></td>
+                                        <td><?php echo $row['tahun_ajaran']?></td>
                                         <td><?php echo $row['judul_karya']?></td>
                                         <td><?php echo $row['jenis_karya']?></td>
                                         <td><?php echo $row['forum_publikasi']?></td>

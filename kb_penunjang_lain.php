@@ -9,8 +9,8 @@ $id_user = $_SESSION['id_user'];
                     <div class="card">
                         <div class="header">
                             <h2>
-                                KINERJA BIDANG PENUNJANG LAINNYA
-                            </h2>
+                                KINERJA BIDANG PENUNJANG LAINNYA &nbsp;<a href="kb_cetak_penunjang.php" class="btn btn-default"><i class="glyphicon glyphicon-print"></i></a>  
+                            </h2>   
                             <ul class="header-dropdown m-r--5">
                                 <li><a class="btn btn-success" href="tambah_kb_penunjang_lain.php">Tambah</a></li>
                             </ul>

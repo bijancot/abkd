@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            KINERJA BIDANG PENUNJANG MASYARAKAT
+                            KINERJA BIDANG PENUNJANG MASYARAKAT &nbsp;<a href="kb_cetak_pengabdian.php" class="btn btn-default"><i class="glyphicon glyphicon-print"></i></a>
                         </h2>
                         <ul class="header-dropdown m-r--5">
                             <li><a class="btn btn-success" href="tambah_kb_pengabdian_masy.php">Tambah</a></li>
