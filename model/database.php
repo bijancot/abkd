@@ -10,8 +10,8 @@ class Database {
 	}
 	public function connect(){
 		$namaserver = 'localhost';
-        $userdb = 'root';
-        $passdb = '';
+        $userdb = 'admin_abkd';
+        $passdb = '1sampaiabkd';
         $namadb = 'admin_abkd';
 
 		$this->connection = mysqli_connect($namaserver, $userdb, $passdb, $namadb);

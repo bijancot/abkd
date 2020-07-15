@@ -1,7 +1,7 @@
 <?php
-	$namaserver = '127.0.0.1';
-	$userdb = 'root';
-	$passdb = '';
+	$namaserver = 'localhost';
+	$userdb = 'admin_abkd';
+	$passdb = '1sampaiabkd';
 	$namadb = 'admin_abkd';
 
 	$conn = mysqli_connect($namaserver, $userdb, $passdb, $namadb);
