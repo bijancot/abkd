@@ -10,7 +10,7 @@
 		$id_user = $_POST['id_user'];
 
 		$ekstensi_diperbolehkan	= array('pdf', 'png', 'jpg', 'jpeg');
-		$nama = $_FILES['file']['name'];
+		$nama = $par.$_FILES['file']['name'];
 		$x = explode('.', $nama);
 		$ekstensi = strtolower(end($x));
 		$file_tmp = $_FILES['file']['tmp_name'];

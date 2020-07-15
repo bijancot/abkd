@@ -50,7 +50,7 @@ CREATE TABLE `identitas` (
   `jurusan` varchar(30) DEFAULT NULL,
   `nama_pt` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id_identitas`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -59,7 +59,7 @@ CREATE TABLE `identitas` (
 
 LOCK TABLES `identitas` WRITE;
 /*!40000 ALTER TABLE `identitas` DISABLE KEYS */;
-INSERT INTO `identitas` VALUES (2,3,'1316034',123892882,2,'Rama Novaris','','S.Kom., M.Kom','Pelaihari','1998-05-29','0821523723','Teknik Informatika','Computer Science','','Teknik Informatika','JL. A. Yani Km. 06 Desa Panggung','Jaka Permadi','Wan Yulianti','ramanovaris@gmai.com','Lektor Kepala','DOSEN DENGAN TUGAS TAMBAHAN',231412,'header.png.png','Teknik Informatika','Teknik Informatika','Politeknik Negeri Tanah Laut'),(4,8,'123123',123,12333,'Sita','Dr','M.Pd','Pelaihari','2019-06-04','09786789','S1','S2','','Informatika','PT','S2','S2','dfa@lc.co','Lektor Kepala','Dosen biasa',NULL,'Simfak ERD.png',NULL,NULL,NULL),(5,9,'1232313',NULL,NULL,'panji','','','',NULL,'','','','','','','','','','','',NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `identitas` VALUES (2,3,'1316034',123892882,2,'Rama Novaris','','S.Kom., M.Kom','Pelaihari','1998-05-29','0821523723','Teknik Informatika','Computer Science','','Teknik Informatika','JL. A. Yani Km. 06 Desa Panggung','Jaka Permadi','Wan Yulianti','ramanovaris@gmai.com','Lektor Kepala','DOSEN DENGAN TUGAS TAMBAHAN',231412,'header.png.png','Teknik Informatika','Teknik Informatika','Politeknik Negeri Tanah Laut'),(4,8,'123123',123,12333,'Sita','Dr','M.Pd','Pelaihari','2019-06-04','09786789','S1','S2','','Informatika','PT','S2','S2','dfa@lc.co','Lektor Kepala','Dosen biasa',NULL,'Simfak ERD.png',NULL,NULL,NULL),(5,9,'1232313',NULL,NULL,'panji','','','',NULL,'','','','','','','','','','','',NULL,NULL,NULL,NULL,NULL),(6,10,'123123',0,0,'budosen','','','','0000-00-00','','','','','','','','','','Profesor','Dosen biasa',NULL,'','','','');
 /*!40000 ALTER TABLE `identitas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -420,7 +420,7 @@ CREATE TABLE `user` (
   `nama_user` varchar(30) DEFAULT NULL,
   `nip` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -429,7 +429,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'admin','admin','admin','Admin','1234'),(3,'1316034','A1316034','pegawai','Slamet Riyadi','1316034'),(8,'123123','123123','pegawai','Sita','123123'),(9,'panji','12345','pegawai','panji','1232313');
+INSERT INTO `user` VALUES (1,'admin','admin','admin','Admin','1234'),(3,'1316034','A1316034','pegawai','Slamet Riyadi','1316034'),(8,'123123','123123','pegawai','Sita','123123'),(9,'panji','12345','pegawai','panji','1232313'),(10,'budosen','12345','pegawai','budosen','123123');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -442,4 +442,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-10  0:22:01
+-- Dump completed on 2020-07-10 21:29:09

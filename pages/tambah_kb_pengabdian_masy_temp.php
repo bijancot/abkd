@@ -1,6 +1,8 @@
 <?php
 require '../koneksi.php';
 
+$date=date_create();
+$par = date_timestamp_get($date);
 
 if ( isset( $_POST['simpan'] ) ) {
 	$id_user        = $_POST['id_user'];
@@ -12,13 +14,13 @@ if ( isset( $_POST['simpan'] ) ) {
 	$id_kbpm        = $_POST['id_kbpm'];
 
 	$ekstensi_diperbolehkan = array( 'pdf', 'png', 'jpg', 'jpeg' );
-	$nama                   = $_FILES['file']['name'];
+	$nama                   = $par.$_FILES['file']['name'];
 	$x                      = explode( '.', $nama );
 	$ekstensi               = strtolower( end( $x ) );
 	$file_tmp               = $_FILES['file']['tmp_name'];
 
 	$ekstensi_diperbolehkan1 = array( 'pdf', 'png', 'jpg', 'jpeg' );
-	$nama1                   = $_FILES['file1']['name'];
+	$nama1                   = $par.$_FILES['file1']['name'];
 	$x1                      = explode( '.', $nama1 );
 	$ekstensi1               = strtolower( end( $x1 ) );
 	$file_tmp1               = $_FILES['file1']['tmp_name'];
